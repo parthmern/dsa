@@ -15,3 +15,5 @@
   
 ![basic-symbols-table](https://github.com/user-attachments/assets/3ac437c6-3cc7-497a-a94f-b6bb29f4f81c)
 
+## example flowcharts
+![main-qimg-89e9488255fafc0e3bbee691aee89b0c-pjlq](https://github.com/user-attachments/assets/3004bb03-f1e0-42e4-b524-46f148e16e61)
