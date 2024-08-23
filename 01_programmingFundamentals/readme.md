@@ -17,3 +17,7 @@
 
 ## example flowcharts
 ![main-qimg-89e9488255fafc0e3bbee691aee89b0c-pjlq](https://github.com/user-attachments/assets/3004bb03-f1e0-42e4-b524-46f148e16e61)
+
+<br/>
+
+![ZTRtY](https://github.com/user-attachments/assets/ad20f602-254a-4a4b-9e85-3fe532978afd)
