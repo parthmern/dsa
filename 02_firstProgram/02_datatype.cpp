@@ -10,3 +10,5 @@
 
 // char = 1 byte = 8 bit = 2^8 - 1 = 255 max can store to 255
 // char name = 256 // overflow ho jayega
+
+// sizeof(varName) -- gives u size in bytes
