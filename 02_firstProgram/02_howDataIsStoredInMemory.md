@@ -16,3 +16,10 @@
 - here in summation 1+1 = 10 (2) 
 
 - datatype is imp because it define how many bytes we need to read from memory and type of data
+
+## signed vs unsigned data
+
+- signed = -ve, 0 ,+ve
+- unsigned = +ve only
+
+![image](https://github.com/user-attachments/assets/7a0ccf4e-56ae-4481-b8e6-0623820d2e8c)
