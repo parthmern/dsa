@@ -1,0 +1,5 @@
+![For-Loop](https://github.com/user-attachments/assets/407a7938-e0a8-4358-a8a1-b8b2a08988c4)
+![While-Loop-GeeksforGeeks](https://github.com/user-attachments/assets/223eeb3b-0056-4a4c-9914-4652f8e4a96b)
+![do-while-Loop-GeeksforGeeks2](https://github.com/user-attachments/assets/9ce17224-a2fc-47ce-8a87-9c051575f631)
+![Continue-Statement-in-C](https://github.com/user-attachments/assets/b654d609-b1cb-4f89-8cf0-2fbf2c42a677)
+![break-in-c](https://github.com/user-attachments/assets/c012941d-67f2-47e9-98d9-7dad76b3bcac)
