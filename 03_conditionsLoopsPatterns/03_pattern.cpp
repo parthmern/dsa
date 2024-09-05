@@ -52,12 +52,15 @@ int main(){
 
         for(int j=0; j < ((2*N)-1) ; j++){
             
+            // for space
             if(j< N-i-1){
                 cout << " ";
             }
+            // for num of stars
             else if(j < i+N){
                 cout << "*";
             }
+            // for last spaces
             else{
                 cout << " ";
             }
