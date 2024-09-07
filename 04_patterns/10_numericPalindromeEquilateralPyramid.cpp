@@ -48,4 +48,33 @@ int main(){
 
 }
 
+// another version
 
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n = 5;
+
+    for (int row = 1; row <= n; row++) {
+        // Print spaces
+        for (int space = 1; space <= n - row; space++) {
+            cout << " ";
+        }
+
+        // Print increasing numbers
+        for (int col = 1; col <= row; col++) {
+            cout << col;
+        }
+
+        // Print decreasing numbers
+        for (int col = row - 1; col >= 1; col--) {
+            cout << col;
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
