@@ -14,6 +14,7 @@
 // where i = [1, N]
 //       j = [1, N]
 
+// formula saying start from 1 th index ( not 0 )
 
 #include <iostream>
 using namespace std;

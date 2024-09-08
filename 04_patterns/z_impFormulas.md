@@ -45,3 +45,27 @@ n = 5 ;
 formula = 2n + 1
 
 ```
+
+
+<br/>
+
+
+```
+//  1
+//  1 1
+//  1 2 1
+//  1 3 3 1
+//  1 4 6 4 1
+//  1 5 10 10 5 1
+//  1 6 15 20 15 6 1
+
+// pascal triangle make with BIONOMIAL COEEFICIENT
+
+// FORMULA
+
+// c = c * (i-j) / j 
+// where i = [1, N]
+//       j = [1, N]
+
+// formula saying start from 1 th index ( not 0 )
+```
