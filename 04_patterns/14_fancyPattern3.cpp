@@ -6,6 +6,9 @@
 //*1*
 //*
 
+// HARD imp // lower part      <--
+
+
 #include <iostream>
 using namespace std;
 
@@ -44,6 +47,7 @@ int main(){
         cout << endl;
     }
 
+    // HARD imp
     // lower part
     for (int row = n - 2; row >= 0; row--) {
         cout << "*";
