@@ -1,5 +1,11 @@
 ## bitwise operator
 
+![cpp-bitwise-operators](https://github.com/user-attachments/assets/7206567b-3b58-4fee-b015-f6151a51040a)
+
+
+![bitwise-operations](https://github.com/user-attachments/assets/731eba58-22ad-44ab-838b-9f47f7b19cea)
+
+
 
 
 ```
