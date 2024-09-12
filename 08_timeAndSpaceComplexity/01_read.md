@@ -59,3 +59,4 @@ like in binary search
 
 ## least or most complex in big O
 
+![1691557928717](https://github.com/user-attachments/assets/73f61d62-7242-4510-980c-bd63c9f3e719)
