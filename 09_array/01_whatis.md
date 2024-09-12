@@ -11,3 +11,5 @@
 - with continious memory
 
 - ![1_qs9NlWwh3E5EU954grffxw](https://github.com/user-attachments/assets/53fcb4eb-6729-4dce-a638-5eb998108037)
+
+- here we are using continious memory so memeory waste is there because some times different and discript memory at diff place
