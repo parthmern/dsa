@@ -29,6 +29,8 @@ like in one loop works till N and under nested loop it works till N and under se
 - logarathmic time = O(log N)
 like in binary search
 
+<img width="546" alt="space1" src="https://github.com/user-attachments/assets/ad96c1e4-3f87-44f6-810a-3bdb8d191c06">
+
 
 ## some functions
 
@@ -58,5 +60,6 @@ like in binary search
 - O(n)
 
 ## least or most complex in big O
+
 
 ![1691557928717](https://github.com/user-attachments/assets/73f61d62-7242-4510-980c-bd63c9f3e719)
