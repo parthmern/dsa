@@ -1,1 +1,1 @@
- " 
+sizeof(arr) / sizeof(int)
