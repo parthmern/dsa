@@ -14,7 +14,7 @@ int main(){
     int start = 0;
     int end = size - 1 ;
 
-    cout << size << endl ;
+    //cout << size << endl ;
 
     while(arr){
 
