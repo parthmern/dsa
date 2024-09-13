@@ -1,7 +1,7 @@
 // vector
 // dynmaic array which doesnot have size 
 
-// VECTOR apne size ko at that time size se double kar deta hai jab fillout ho jata hai total size jitna
+// VECTOR apne size ko at that time size se double kar deta hai jab fillout ho jata hai total size se extra
 
 
 #include <iostream>
@@ -64,7 +64,7 @@ int main(){
         cout << crr[i] << " ";  
     } // 10 20 30 40 50
 
-    
+    cout << "vector crr is empty or not" << crr.empty() << endl ;   // 0 -- false(not empty)
 
 
     return 0;
