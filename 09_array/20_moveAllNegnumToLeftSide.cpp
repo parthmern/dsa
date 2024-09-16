@@ -11,7 +11,7 @@ using namespace std;
 
 int main(){
 
-    int arr[] = {-12, 11, -13, -5, 6, -7, 5, -3, -6};
+    int arr[] = {-12, 11,-5, 6, -7, 5, -3, 0, -6};
     int size = 9;
 
     int start=0;
@@ -29,7 +29,9 @@ int main(){
             point++;
             start++;
         }else{
-            swap(arr[start], arr[end]);
+            // for zero
+            //swap(arr[start], arr[end]);
+            swap(arr[end], arr[start]);
         }
     }
 
