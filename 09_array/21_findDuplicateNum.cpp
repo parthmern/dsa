@@ -20,11 +20,40 @@ int duplicateEle(vector<int>& nums) {
     return -1; // In case there's no duplicate (though problem guarantees there is one)
 }
 
+
+// NEGATIVE MARKING METHOD
+int negMarkingMethodDuplicateEle(vector<int>& nums){
+
+    int ans = -1 ;
+
+    for(int i=0; i<nums.size(); i++){
+
+        int index = abs(nums[i]);
+
+        if(nums[index] < 0){
+            // already visited ?
+            ans = index;
+        } else{
+            // mark as visited
+            nums[index] = nums[index] * (-1) ;
+        }
+
+    }
+
+    return ans ;
+
+}
+
+
+
+
 int main() {
     vector<int> arr{1, 3, 4, 2, 2};
 
     int duplicate = duplicateEle(arr);
-    cout << "Duplicate element is: " << duplicate << endl;
+    int dup = negMarkingMethodDuplicateEle(arr);
+    cout << "Duplicate element is: " << duplicate << "---" << dup << endl;
 
+    
     return 0;
 }
