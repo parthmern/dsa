@@ -20,6 +20,11 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
         for (int i = startingRow; i <= endingCol && element < totalElement; i++) {
             ans.push_back(matrix[startingRow][i]);
             element++;
+
+            // // Can also do this for all loops below (while ignoring && condition in loop)
+            // if(element >= totalElement){
+            //     break;
+            // }
         }
         startingRow++;
 
