@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int binarySearchLastOcc(int arr[], int size, int target){
@@ -48,8 +50,17 @@ int main(){
     int ans = binarySearchLastOcc(arr, size, target);
 
     if(ans>=0){
-        cout << "first occ index is =>" << ans << endl;
+        cout << "last occ index is =>" << ans << endl;
     }
+
+    std::vector<int> v{1,3,4,4,4,4,4,6,7,9};
+    // Lower bound
+    auto lb = lower_bound(v.begin(), v.end(), 4);
+    cout << "first occ index ==>" << lb-v.begin() << endl;
+
+    auto ub = upper_bound(v.begin(), v.end(), 4);
+    cout << "last occ index ==>" << ub-v.begin()-1 << endl;
+
 
     return 0;
 }
