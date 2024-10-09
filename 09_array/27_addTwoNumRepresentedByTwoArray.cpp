@@ -34,7 +34,8 @@ int main() {
     while (i >= 0) {
         cout << "inner two-> i = " << i << endl;
 
-        int sum = a[i] + carry;
+        // assume b[j] is not available so zero
+        int sum = a[i] + 0 + carry;
         int digit = sum % 10;
         carry = sum / 10;
 
@@ -47,7 +48,7 @@ int main() {
     while (j >= 0) {
         cout << "inner three-> j = " << j << endl;
 
-        int sum = b[j] + carry;
+        int sum = 0 + b[j] + carry;
         int digit = sum % 10;
         carry = sum / 10;
 
