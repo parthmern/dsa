@@ -15,6 +15,22 @@ int myStrLen(char charArray[]) {
     return length;
 }
 
+int reverseCharArray(char arr[]){
+
+    int n = myStrLen(arr);
+
+    int i = 0 ;
+    int j = n - 1;
+
+    while(i<=j){
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
+    }
+
+    cout << "reverse arr => " << arr << endl;
+}
+
 int main(){
 
 
@@ -49,6 +65,8 @@ int main(){
 
     cout << strlen(ch) << endl;
     cout << myStrLen(ch) << endl;
+
+    reverseCharArray(ch); // pass by ref
     
 
 
