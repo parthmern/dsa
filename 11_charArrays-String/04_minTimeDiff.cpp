@@ -29,7 +29,9 @@ int findMinDifference(vector<string>& timePoints) {
     }
 
     // Step 4: Check the difference between the first and last time points (circular difference)
-    int lastDiff = (minutes[0] + 1440) - minutes[minutes.size() - 1];
+    int lastDiff1 = (minutes[0] + 1440) - minutes[minutes.size() - 1];  
+    int lastDiff2 = minutes[minutes.size()-1] - minutes[0];
+    int lastDiff = min(lastDiff1, lastDiff2);
     mini = min(mini, lastDiff);
 
     return mini;
