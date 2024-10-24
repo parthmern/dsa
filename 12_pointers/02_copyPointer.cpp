@@ -12,5 +12,19 @@ int main(){
     cout << *ptr << endl;   //5
     cout << *dptr << endl;  //5
 
+    int arr[4] = {45,44,43,23};
+
+    cout << arr << &arr << &arr[0] << endl;// same
+
+    cout << *arr+1 << endl;//46
+
+    cout << *(arr+1) << arr[1] << endl; // same 44
+
+    cout << 2[arr] << arr[2] << endl; // same 43
+
+
+    
+
+
     return 0;
 }
