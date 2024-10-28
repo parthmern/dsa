@@ -10,13 +10,12 @@ int findMaximumEle(int arr[], int n, int i, int& maxi){
         return maxi;
     }
 
-
     // progress
     if(maxi<arr[i]){
         maxi = arr[i];
     }
-    
 
+    // recursion
     findMaximumEle(arr,n,i+1, maxi);
 
 }
