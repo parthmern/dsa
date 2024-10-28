@@ -1,5 +1,5 @@
 #include <iostream>
-#include <limits>   
+#include <climits>   
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int findMaximumEle(int arr[], int n, int i, int& maxi){
 
 
     // progress
-    if(maxi>arr[i]){
+    if(maxi<arr[i]){
         maxi = arr[i];
     }
     
@@ -30,7 +30,7 @@ int main(){
 
     int maxi = INT_MIN;
 
-    cout << findMaximumEle(arr,n,i,maxi);
+    cout << findMaximumEle(arr,n,i,maxi)<<endl;
 
     cout << maxi ;
 
