@@ -1,38 +1,33 @@
 #include <iostream>
-#include <limits>   
-
+#include <string>
 using namespace std;
 
-int findMaximumEle(int arr[], int n, int i, int& maxi){
+void printSubstring(string str, string output, int i){
 
-    // base case
-    if(i>=n){
-        return maxi;
+    //base case
+    if(i>= str.length()){
+        cout << output << endl;
+        return;
     }
 
+    // rr
+    // 1)exclude
+    printSubstring(str, output, i+1);
 
-    // progress
-    if(maxi>arr[i]){
-        maxi = arr[i];
-    }
-    
-
-    findMaximumEle(arr,n,i+1, maxi);
+    // 2)include
+    output.push_back(str[i]);
+    printSubstring(str, output, i+1);
 
 }
 
 
 int main(){
 
-    int arr[] = {1,2,3,4,5};
-    int n =5;
-    int i=0;
+    string str = "abc";
+    string output = "";
 
-    int maxi = INT_MIN;
-
-    cout << findMaximumEle(arr,n,i,maxi);
-
-    cout << maxi ;
+    int i = 0;
+    printSubstring(str, output, i);
 
     return 0;
 }
