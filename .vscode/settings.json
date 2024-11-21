@@ -53,6 +53,7 @@
         "list": "cpp",
         "xhash": "cpp",
         "xtree": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "numeric": "cpp"
     }
 }
