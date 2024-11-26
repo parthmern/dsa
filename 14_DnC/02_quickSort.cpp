@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -25,19 +26,45 @@ int partition(int *arr, int s, int e){
     int i = s;
     int j = e;
 
-    while(i<pivotIndex && j>pivotEle){
-        while(arr[i]<=pivotEle){
-            i++;
-        }
-        while(arr[i]>pivotEle){
-            j--;
-        }
+    // while(i<pivotIndex && j>pivotEle){
+    //     while(arr[i]<=pivotEle){
+    //         i++;
+    //     }
+    //     while(arr[i]>pivotEle){
+    //         j--;
+    //     }
 
-        // two pointer method and swapping to adjust eles
-        if(i<pivotIndex && j>pivotEle){
-            swap(arr[i], arr[j]);
+    //     // two pointer method and swapping to adjust eles
+    //     if(i<pivotIndex && j>pivotEle){
+    //         swap(arr[i], arr[j]);
+    //     }
+    // }
+
+
+    vector<int> smaller, greater;
+
+    for (int i = s + 1; i <= e; i++) {
+        if (arr[i] <= pivotEle) {
+            smaller.push_back(arr[i]);
+        } else {
+            greater.push_back(arr[i]);
         }
     }
+
+    // Rebuild the array with smaller, pivot, and greater elements
+    int index = s;
+    for (int num : smaller) {
+        arr[index++] = num;
+    }
+
+    pivotIndex = index; // Correct position of pivot
+    arr[index++] = pivotEle;
+
+    for (int num : greater) {
+        arr[index++] = num;
+    }
+
+
 
     return pivotIndex;
 }
