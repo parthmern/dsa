@@ -25,7 +25,6 @@ void mergeInPlace(int *arr, int s, int e){
         gap = gap<=1 ? 0 : ((gap/2) + (gap%2));
 
     }
-    
 
 }
 
