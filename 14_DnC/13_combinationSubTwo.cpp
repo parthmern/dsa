@@ -21,6 +21,11 @@ void findCombinations(int sum, vector<int>& candidates, int target, vector<int>&
 
     // rr
     for( int i=indexNow; i<candidates.size(); i++){
+
+        if(i>indexNow && candidates[i-1] == candidates[i]){
+            continue;
+        }
+
         current.push_back(candidates[i]);
         findCombinations(sum+candidates[i], candidates, target, current, result, i+1);
         current.pop_back();
