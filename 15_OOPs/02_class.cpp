@@ -30,6 +30,11 @@ class Animal{
         weight = w; 
     }
 
+    void setWeightThis(int weight){
+        this->weight = weight;
+        // current obj weigth = parameter weight
+    }
+
 
 };
 
@@ -50,9 +55,14 @@ int main(){
     cout << "weight of ramesh using setter func" << ramesh.getWeight() << endl;
 
 
-
+    // ----------------------------------
     // 2)dynamic allocation
+    Animal* suresh = new Animal;
+    (*suresh).age = 17;
+    suresh->age = 17;
 
+    suresh->eat();
+    
 
 
     return 0;
