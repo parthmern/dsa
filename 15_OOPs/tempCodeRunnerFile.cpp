@@ -1,1 +1,2 @@
-float(4.4)
+Animal* a = new Animal();   // animal constructor
+    // Dog* b = new Dog();  
