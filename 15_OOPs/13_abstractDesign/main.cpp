@@ -11,5 +11,6 @@ int main() {
     Bird* bird = new Sparrow();
     birdDoesSomething(bird);
     delete bird;
+    
     return 0;
 }
