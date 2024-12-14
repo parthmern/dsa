@@ -228,6 +228,57 @@ void deleteNode(Node* &head, Node* &tail, int position){
 
 }
 
+Node* reverse(Node* &prev, Node* &curr){
+
+    // base case 
+    if(curr == NULL){
+        return prev; // new head
+    }
+
+    // rr
+    Node* forward = curr->next;
+    curr->next = prev;
+
+    reverse(curr,forward);
+
+}
+
+
+Node* reverseUsingLoop(Node* &head){
+
+    Node* prev = NULL;
+    Node* curr = head;
+
+    while(curr != NULL){
+        Node* temp = curr->next;
+        curr->next = prev;
+    
+        prev = curr;
+        curr = temp;
+    }
+
+    return prev;
+
+
+}
+
+Node* reverseUsingRecursion(Node* &prev, Node* &curr){
+
+    // base case 
+    if(curr == NULL){
+        return prev; // new head
+    }
+
+    // rr
+    Node* temp = curr->next;
+    curr->next = prev;
+
+    prev = curr;
+    curr = temp;
+
+    reverseUsingRecursion(prev,temp);
+
+}
 
 
 int main(){
@@ -266,6 +317,24 @@ int main(){
     deleteNode(head,tail,7);
     deleteNode(head,tail,2);
 
+    print(head);
+
+
+    cout<< "after reversing .." << endl;
+
+    Node* prev = NULL;
+    Node* curr = head;
+    head = reverse(prev, head);
+
+    print(head);
+
+    head = reverseUsingLoop(head);
+    cout<< "after reversing .." << endl;
+    print(head);
+
+    prev = NULL;
+    head = reverseUsingRecursion(prev, head);
+    cout<< "after reversing .." << endl;
     print(head);
 
     
