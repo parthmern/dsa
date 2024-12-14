@@ -68,6 +68,75 @@ void insertAtHead(Node* &head, Node* &tail, int data){
 
 }
 
+void insertAtTail(Node* &head, Node* &tail, int data){
+
+    if(head == NULL){
+        // empty ll
+
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+
+        return;
+    }
+
+    Node* newNode = new Node(data);
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+}
+
+void insertAtPosition(Node* &head, Node* &tail, int position, int data){
+    if(head == NULL){
+        // empty ll
+        Node* newNode = new Node(data);
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+
+    if(position==1){
+        insertAtHead(head,tail,data);
+        return;
+    }
+
+    if(position>getLength(head)){
+        insertAtTail(head,tail,data);
+        return;
+    }
+
+    // insert in middle
+
+    //1) find prev and curr
+    Node* prevNode = head;
+
+    // int i = 1;
+    // while(i<position-1){
+    //     prevNode = prevNode->next;  
+    //     i++; 
+    // }
+
+    for(int i=0; i<position-2; i++){
+        cout << i << "=>" << prevNode-> data << endl;
+        prevNode = prevNode->next;
+    }
+
+    cout <<"after loop prevNode is" << prevNode-> data << "and prev->next means currentNode is " << prevNode->next->data << endl;
+
+    Node* currNode = prevNode->next;
+
+    // 2)
+    Node* newNode = new Node(data);
+
+    //3)
+    prevNode->next = newNode;
+    newNode->prev = prevNode;
+    currNode->prev = newNode;
+    newNode->next = currNode;
+
+
+}
+
 int main(){
 
     Node* first = new Node(10);
@@ -85,6 +154,10 @@ int main(){
     third->prev = second;
 
     insertAtHead(head,tail,101);
+
+    insertAtTail(head,tail,501);
+
+    insertAtPosition(head,tail,5,401);
 
     print(head);
 
