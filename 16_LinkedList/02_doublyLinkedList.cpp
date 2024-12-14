@@ -19,6 +19,17 @@ class Node{
         this->next = NULL;
     }
 
+    ~Node(){
+        int value = this -> data;
+        //memory free
+        if(this->next != NULL) {
+            this->next = NULL;
+            this->prev = NULL;
+            delete next;        // "Recursive Deletion" learn about this 
+        }
+        cout << " memory is free for node with data " << value << endl;
+    }
+
 };
 
 void print(Node* &head){
@@ -133,8 +144,68 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int data){
     newNode->prev = prevNode;
     currNode->prev = newNode;
     newNode->next = currNode;
+}
 
+void deleteFromPos(Node* &head, Node* &tail, int position){
+    if(head == NULL){
+        cout << "LL is empty" << endl;
+        return;
+    }
 
+    if(head->next == NULL){
+        Node* temp = head;
+        head = NULL;
+        tail = NULL;
+        delete temp;
+        return;
+    }
+
+    if(position == 1){
+        // delete at head
+        Node* temp = head;
+        head = head->next;
+        head->prev = NULL;
+        temp->next = NULL;
+        delete temp;
+        return; 
+    }
+
+    if (position < 1 || position > getLength(head)) {
+        // Invalid position
+        cout << "Invalid position" << endl;
+        return;
+    }
+
+    if(position == getLength(head)){
+        // delete at tail
+        Node* temp = tail;
+        tail = tail->prev;
+        temp->prev = NULL;
+        tail->next = NULL;
+        delete temp;
+        return;
+    }
+
+    // middle position delete
+    //1) find left, current, right
+    Node* current = head;
+
+    for(int i=0; i<position-1; i++){
+        cout << i << " => " << current->data << endl;
+        current = current->next;
+    }
+
+    cout << "after loop current: " << current->data << " left : " << current->prev->data << " right: " << current->next->data << endl;
+
+    Node* left = current->prev;
+    Node* right = current->next;
+
+    left->next = right;
+    right->prev = left;
+    current->prev = NULL;
+    current->next = NULL;
+    delete current;
+    
 }
 
 int main(){
@@ -160,7 +231,11 @@ int main(){
     insertAtPosition(head,tail,5,401);
 
     print(head);
+    cout << endl;
 
+    deleteFromPos(head,tail,4);
+
+    print(head);
 
     return 0;
 }
