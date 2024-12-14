@@ -18,12 +18,24 @@ class Node{
         }
 
         ~Node(){
-
+            int value = this -> data;
+            //memory free
+            if(this->next != NULL) {
+                delete next;
+                this->next = NULL;
+            }
+            cout << " memory is free for node with data " << value << endl;
         }
 
 };
 
 void print(Node* &head){
+
+    if(head == NULL) {
+        cout << "List is empty "<< endl;
+        return ;
+    }
+
     Node*temp = head;
     while( temp != NULL ){
         cout << temp->data << endl;
