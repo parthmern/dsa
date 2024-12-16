@@ -43,6 +43,7 @@ int lowerBound(vector<int>& arr, int x){
         int mid = (s+e)/2;
 
         if(arr[mid]>=x){
+            
             ans=mid;
             e=mid-1;
         }
