@@ -21,7 +21,7 @@ int longestValidParentheses(string s) {
             } else {
                 int len = i - st.top(); // Calculate length of valid substring
                 maxLen = max(len, maxLen); // Update max length
-            }
+            } 
         }
     }
 
