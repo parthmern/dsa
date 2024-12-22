@@ -54,6 +54,7 @@
         "xhash": "cpp",
         "xtree": "cpp",
         "algorithm": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "stack": "cpp"
     }
 }
