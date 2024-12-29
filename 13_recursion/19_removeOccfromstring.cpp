@@ -20,6 +20,19 @@ void removeOcc(string &s, const string &part) {
     }
 }
 
+// void removeOcc(string &s, const string &part){
+
+//     int findIndex = s.find(part);
+
+//     if( findIndex != string::npos ){
+//         s.erase( findIndex, part.length());
+//         removeOcc(s,part);
+//     }else{
+//         return ;
+//     }
+
+// }
+
 string removeAllOccurrences(string s, const string &part) {
     removeOcc(s, part);
     return s;
