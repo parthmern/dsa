@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int partition(int *arr, int s, int e){
+int partition(int *arr, int s, int e)
+{
 
     // 1)choose pivot ele
     int pivotIndex = s;
@@ -11,14 +12,16 @@ int partition(int *arr, int s, int e){
 
     // 2)find right position  for pivot
     int count = 0;
-    for(int i=s+1; i<=e; i++){
-        if(arr[i]<=pivotEle){
+    for (int i = s + 1; i <= e; i++)
+    {
+        if (arr[i] <= pivotEle)
+        {
             count++;
         }
     }
-    // jab loop se bahar aya to pivot ele ka right postion index 
-    // read hai 
-    int rightIndex = s+count ;
+    // jab loop se bahar aya to pivot ele ka right postion index
+    // read hai
+    int rightIndex = s + count;
     swap(arr[pivotIndex], arr[rightIndex]);
     pivotIndex = rightIndex;
 
@@ -39,7 +42,6 @@ int partition(int *arr, int s, int e){
     //         swap(arr[i], arr[j]);
     //     }
     // }
-
 
     // vector<int> smaller, greater;
 
@@ -64,28 +66,33 @@ int partition(int *arr, int s, int e){
     //     arr[index++] = num;
     // }
 
-    while(i==j){
-
-        if( arr[i] > pivotEle ){
-            swap(arr[i], arr[j]);
-            j--;
-        }
-
-        if(arr[i] <= pivotEle){
-            swap(arr[i], arr[j]);
+    while (i < pivotIndex && j > pivotIndex)
+    {
+        if (arr[i] < pivotEle)
+        {
             i++;
         }
-
+        else if (arr[j] > pivotEle)
+        {
+            j--; // Move to the next element on the right
+        }
+        else
+        {
+            swap(arr[i], arr[j]);
+            i++; // After fixing `i`, move right
+            j--; // After fixing `j`, move left
+        }
     }
-
 
     return pivotIndex;
 }
 
-void quickSort(int *arr, int n, int s, int e){
+void quickSort(int *arr, int n, int s, int e)
+{
 
     // basecase
-    if(s>=e){
+    if (s >= e)
+    {
         return;
     }
 
@@ -93,22 +100,23 @@ void quickSort(int *arr, int n, int s, int e){
     int p = partition(arr, s, e);
 
     // rr
-    quickSort(arr,n,s,p-1);   // left
-    quickSort(arr,n,p+1,e);  // right
-
+    quickSort(arr, n, s, p - 1); // left
+    quickSort(arr, n, p + 1, e); // right
 }
 
-int main(){
+int main()
+{
 
-    int arr[] = {8,1,3,4,20,50,30};
+    int arr[] = {8, 1, 101, 3, 4, 20, 50, 30};
     int n = 7;
 
     int s = 0;
-    int e = n-1;
+    int e = n - 1;
 
-    quickSort(arr, n ,s,e);
+    quickSort(arr, n, s, e);
 
-    for(int i=0; i<n; i++){
+    for (int i = 0; i < n; i++)
+    {
         cout << arr[i] << " ";
     }
 

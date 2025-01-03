@@ -60,6 +60,8 @@ string numberToWords(int num) {
                 c = " " + c;
             }
 
+            // cout << "for num=>" << num << " " << "a=>" << a << " b=>" << b << " c=>" << c << endl;
+            
             return a + b + c;
         }
     }

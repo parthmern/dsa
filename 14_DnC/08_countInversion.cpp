@@ -11,7 +11,7 @@ long merge(vector<int> &arr, vector<int> &temp, int s, int mid, int e){
         if( arr[i] <= arr[j]){
             temp[k++] = arr[i++];
         }
-        else{   // arr[j] > arr[j]  // INVERSION COUNT CASE
+        else{   // arr[i] > arr[j]  // INVERSION COUNT CASE
             temp[k++] = arr[j++];
             count = count + (mid - i + 1);
         }

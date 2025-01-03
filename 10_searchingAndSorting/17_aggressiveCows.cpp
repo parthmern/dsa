@@ -11,11 +11,14 @@ bool isPossible(vector<int> &stalls, int k, int mid, int n) {
     int lastPos = stalls[0];
     
     for(int i=0; i<n; i++ ){
+
+        cout << "stalls[i] : " << stalls[i] << endl;
         
         if(stalls[i]-lastPos >= mid){
             cowCount++;
             if(cowCount==k)
             {
+                cout << "done" << endl;
                 return true;
             }
             lastPos = stalls[i];
