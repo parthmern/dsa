@@ -89,7 +89,7 @@ int main(){
     cout << "front ele is=> "<< q.getFront() << endl; 
 
     if(q.isEmpty()){
-        cout << "queue is empty" << endl;
+        cout << "q  ueue is empty" << endl;
     }
     else{
         cout << "queue is not empty" << endl;
