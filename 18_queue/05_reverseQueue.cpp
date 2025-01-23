@@ -21,6 +21,20 @@ void reverseQueue(queue<int> &q){
 
 }
 
+void reverseQueueRecursion(queue<int> &q){
+    if(q.empty()){
+        return;
+    }
+
+    int temp = q.front();
+    q.pop();
+
+    reverseQueueRecursion(q);
+
+    q.push(temp);
+
+}
+
 
 int main(){
 
@@ -32,7 +46,8 @@ int main(){
     q.push(8);
     // 3-6-9-2-8
 
-    reverseQueue(q);
+    //reverseQueue(q);
+    reverseQueueRecursion(q);
 
     while (!q.empty())
     {
@@ -40,6 +55,5 @@ int main(){
         q.pop();
     }
     
-
 
 }
