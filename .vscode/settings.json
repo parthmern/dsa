@@ -55,6 +55,7 @@
         "xtree": "cpp",
         "algorithm": "cpp",
         "numeric": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "queue": "cpp"
     }
 }
