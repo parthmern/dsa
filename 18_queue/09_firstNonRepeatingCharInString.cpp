@@ -8,9 +8,7 @@ int main(){
 
     string str = "aabc";
     int freq[26] = {0};
-
     queue<char> q;
-
     string ans = "";
 
     for(int i=0; i<str.length(); i++){
@@ -34,9 +32,7 @@ int main(){
         if(q.empty()){
             ans.push_back('#');
         }
-
     }
-
     cout << ans << endl;
     
 
