@@ -72,21 +72,30 @@ void postOrderTraveral(Node* root){
 void levelOrderTraversal(Node* root){
     queue<Node*> q;
     q.push(root);
+    q.push(NULL);
 
-    while(!q.empty()){
+    while(q.size()>1){
         // front fetch
         Node* front = q.front();
         q.pop();
-        cout << front->data << " ";
 
-        // left 
-        if(front->left != NULL){
-            q.push(front->left);
+        if(front == NULL){
+            cout << endl;
+            q.push(NULL);
+        }else{
+            // valid
+            cout << front->data << " ";
+
+            // left 
+            if(front->left != NULL){
+                q.push(front->left);
+            }
+            // right 
+            if(front->right != NULL){
+                q.push(front->right);
+            }
         }
-        // right 
-        if(front->right != NULL){
-            q.push(front->right);
-        }
+        
     }
 }
 
