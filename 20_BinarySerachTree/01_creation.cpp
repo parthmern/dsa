@@ -43,7 +43,6 @@ void takeInput(Node*& root) {
     }
 }
 
-
 void levelOrderTraversal(Node* root){
     queue<Node*> q;
     q.push(root);
@@ -74,13 +73,13 @@ void levelOrderTraversal(Node* root){
     }
 }
 
-bool findNodeInBST(Node* root, int target){
+Node* findNodeInBST(Node* root, int target){
     if(root==NULL){
-        return false;
+        return NULL;
     }
 
     if(root->data==target){
-        return true;
+        return root;
     }
 
     if(target > root->data){
@@ -119,6 +118,46 @@ int maxVal(Node* root){
     return temp->data;
 }
 
+
+Node* deleteNodeInBST(Node* root, int target){
+    // base case
+    if(root==NULL){
+        return root;
+    }
+
+    if(root->data == target){
+        // isi ko delete karna he
+        /// 4 case
+
+        if(root->left == NULL && root->right ==NULL){
+            delete root;
+            return NULL;
+        }else if(root->left == NULL && root->right != NULL){
+            Node* child = root->right;
+            delete root;
+            return child;
+        }else if(root->left != NULL && root->right == NULL){
+            Node* child = root->left;
+            delete root;
+            return child;
+        }else{
+            // both child existed
+            // inorder predecessor of left sub tree -> left sub tree max val
+            int inorderPres = maxVal(root->left);
+            root->data = inorderPres;
+            root->left = deleteNodeInBST(root->left, inorderPres);
+            return root;
+        }
+    }else if(target> root->data){
+        root->right = deleteNodeInBST(root->right, target);
+    }else{
+        root->left = deleteNodeInBST(root->left, target);
+    }
+
+    return root;    
+}
+
+
 int main() {
     Node* root = NULL;
     cout << "Enter data for ROOT node (enter -1 to stop): ";
@@ -132,6 +171,13 @@ int main() {
 
     cout << "Min val" << minVal(root) << endl;
     cout << "Max val" << maxVal(root) << endl;
+
+    cout << "deletion" << endl;
+    deleteNodeInBST(root, 100);
+
+    cout << "Level Order Traversal of BST: ";
+    levelOrderTraversal(root);
+
 
     return 0;
 }
