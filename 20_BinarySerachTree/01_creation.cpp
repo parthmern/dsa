@@ -74,6 +74,23 @@ void levelOrderTraversal(Node* root){
     }
 }
 
+bool findNodeInBST(Node* root, int target){
+    if(root==NULL){
+        return false;
+    }
+
+    if(root->data==target){
+        return true;
+    }
+
+    if(target > root->data){
+        // right sub tree
+        return findNodeInBST(root->right,target);
+    }else{
+        return findNodeInBST(root->left,target);
+    }
+}
+
 int main() {
     Node* root = NULL;
     cout << "Enter data for ROOT node (enter -1 to stop): ";
@@ -81,6 +98,9 @@ int main() {
 
     cout << "Level Order Traversal of BST: ";
     levelOrderTraversal(root);
+
+    cout << "searching" << endl;
+    cout << findNodeInBST(root, 155);
 
     return 0;
 }
