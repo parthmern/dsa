@@ -91,6 +91,34 @@ bool findNodeInBST(Node* root, int target){
     }
 }
 
+int minVal(Node* root){
+    Node* temp = root;
+
+    if(temp == NULL){
+        return -1;
+    }
+
+    while(temp->left != NULL){
+        temp = temp->left; 
+    }
+
+    return temp->data;
+}
+
+int maxVal(Node* root){
+    Node* temp = root;
+
+    if(temp == NULL){
+        return -1;
+    }
+
+    while(temp->right != NULL){
+        temp = temp->right; 
+    }
+
+    return temp->data;
+}
+
 int main() {
     Node* root = NULL;
     cout << "Enter data for ROOT node (enter -1 to stop): ";
@@ -101,6 +129,9 @@ int main() {
 
     cout << "searching" << endl;
     cout << findNodeInBST(root, 155);
+
+    cout << "Min val" << minVal(root) << endl;
+    cout << "Max val" << maxVal(root) << endl;
 
     return 0;
 }
