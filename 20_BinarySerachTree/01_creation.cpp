@@ -157,26 +157,47 @@ Node* deleteNodeInBST(Node* root, int target){
     return root;    
 }
 
+Node* bstUsingInorder(int inorder[], int s, int e){
+    if(s>e){
+        return NULL; // invalid array
+    }
+    int mid = (s+e)/2;
+    int ele = inorder[mid];
+    Node* root = new Node(ele); 
+
+    root->left = bstUsingInorder(inorder, s, mid-1);
+    root->right = bstUsingInorder(inorder, mid+1, e);
+
+    return root;
+
+}
+
 
 int main() {
-    Node* root = NULL;
-    cout << "Enter data for ROOT node (enter -1 to stop): ";
-    takeInput(root);
+    // Node* root = NULL;
+    // cout << "Enter data for ROOT node (enter -1 to stop): ";
+    // takeInput(root);
+
+    // cout << "Level Order Traversal of BST: ";
+    // levelOrderTraversal(root);
+
+    // cout << "searching" << endl;
+    // cout << findNodeInBST(root, 155);
+
+    // cout << "Min val" << minVal(root) << endl;
+    // cout << "Max val" << maxVal(root) << endl;
+
+    // cout << "deletion" << endl;
+    // deleteNodeInBST(root, 100);
+
+    // cout << "Level Order Traversal of BST: ";
+    // levelOrderTraversal(root);
+
+    int inorder[] = {1,2,3,4,5,6,7,8,9};
+    Node* rootNew = bstUsingInorder(inorder,0,8);
 
     cout << "Level Order Traversal of BST: ";
-    levelOrderTraversal(root);
-
-    cout << "searching" << endl;
-    cout << findNodeInBST(root, 155);
-
-    cout << "Min val" << minVal(root) << endl;
-    cout << "Max val" << maxVal(root) << endl;
-
-    cout << "deletion" << endl;
-    deleteNodeInBST(root, 100);
-
-    cout << "Level Order Traversal of BST: ";
-    levelOrderTraversal(root);
+    levelOrderTraversal(rootNew);
 
 
     return 0;
