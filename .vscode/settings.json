@@ -58,6 +58,7 @@
         "stack": "cpp",
         "queue": "cpp",
         "array": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "10_parathaspoj,cpp": "cpp"
     }
 }
