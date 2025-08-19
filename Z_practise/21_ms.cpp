@@ -54,7 +54,7 @@ class Solution {
         
         int s = l;
         int e = r;
-        int mid = (s+e)/2;
+        int mid = (s+e)/2; 
         
         if(s>=e) return;
         mergeSort(arr, s, mid);
