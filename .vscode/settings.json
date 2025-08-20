@@ -59,6 +59,11 @@
         "queue": "cpp",
         "array": "cpp",
         "deque": "cpp",
-        "10_parathaspoj,cpp": "cpp"
-    }
+        "10_parathaspoj,cpp": "cpp",
+        "map": "cpp",
+        "optional": "cpp",
+        "set": "cpp",
+        "string": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
