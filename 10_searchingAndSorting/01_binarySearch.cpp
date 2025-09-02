@@ -16,7 +16,7 @@ int binarySearch(int arr[], int size, int target){
         int element = arr[mid];
 
         if(element == target){
-            return mid;
+            return mid; 
         }
         else if(element > target){
             // search in left
