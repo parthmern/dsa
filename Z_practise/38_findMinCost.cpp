@@ -19,7 +19,7 @@ int findMinimumCost(string str) {
       }else{
         st.push(ch);
       }
-    }
+    } 
   }
 
   // only invalid inside stack
