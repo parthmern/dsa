@@ -13,8 +13,7 @@ class Solution {
             return;
         }
         // LNR (Inorder)
-        storeInorderTraversal(root->left, in);
-        in.push_back(root->data);
+        storeInorderTraversal(root->left, in);  
         storeInorderTraversal(root->right, in);
     }
 
