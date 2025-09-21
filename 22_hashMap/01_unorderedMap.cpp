@@ -38,11 +38,6 @@ int main(){
         // map ki har entry pair hoti he so
         cout << i.first << "-" << i.second << " ";  // fortunar-7 coool-0 alto-2 parth-9
     }
-
     
-
-
-
-
     return 0;
 }
