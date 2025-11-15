@@ -59,5 +59,4 @@ class Common{
         curr = n;
     }
     
-    
 }
