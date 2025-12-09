@@ -21,7 +21,7 @@ public:
 
                 // Check if u is an articulation point
                 if (parent != -1 && low[v] >= disc[u]) {
-                    ap[u] = 1;  // mark as AP
+                    ap[u] = 1;  // mark as AP    
                 }
             } else {
                 // Back edge
