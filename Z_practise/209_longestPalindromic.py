@@ -9,4 +9,4 @@ class Solution:
                 substring = s[i:j+1]
                 if substring == reverse(substring) and len(substring) > len(ans):
                     ans = substring
-        return ans
+        return ans  
