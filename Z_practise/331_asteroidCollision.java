@@ -8,7 +8,8 @@ class Solution {
         for(int a : asteroids){
 
             boolean destroyed = false;
-
+            
+            // asteroid neg and peek should be +ve so can collide
             while(!st.isEmpty() && a < 0 && st.peek() > 0){
 
                 if(st.peek() < -a){
