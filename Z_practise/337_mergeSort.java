@@ -14,7 +14,10 @@ class Solution {
         int j = mid+1;
         
         while(i<=mid && j<=e){
-            
+
+            if(arr[i] > 2*arr[j]){ 
+                count += 1;
+            }
             if(arr[i] <= arr[j]){
                 temp[ti] = arr[i];
                 i++;
